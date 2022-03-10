@@ -1,0 +1,135 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
+  \*****************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Caveat&display=swap);
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css (1) ***!
+  \*********************************************************************/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #212534;
+background-image: url(468d3f34f5cbaea63229.svg);
+background-repeat: no-repeat;
+background-size: 100%;
+background-attachment: fixed;
+background-position: -700px;
+min-height: 100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+box-sizing: border-box;
+}
+#messege{
+    color: #ffff;
+}
+/*card*/
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  
+  .card {
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: inline-flex;
+    font-size: 1.5em;
+    color: #58c7fa00;
+    font-family: cursive;
+  }
+  
+ /* .card:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }  */
+  .card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  /*.card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }*/
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+#pedido{
+    top: 9vh;
+    left:50vh;
+}
+#pedido>form>label{
+    text-transform: capitalize;
+    color: #fff
+}
+
+#messege{
+  font-family: 'Caveat', cursive;
+  margin-top: 30px;
+}
+#sent{
+  width:100%;
+  color: #fff;
+  background-color: #212534;
+ border: none;
+ border-radius: 6px;
+ font-family: 'Caveat', cursive;
+ font-size: 22px;
+}
+#sent:hover{
+  color: #fff;
+  background-color: #58c7fa;
+  transition:2s; 
+}
+#ped{
+  color:#fff
+}
